@@ -28,3 +28,21 @@ func GetStationResult(version string, parameter string, station string) (result 
 	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
 	return result, err
 }
+
+func GetStationSetResult(version string, parameter string, stationSet string) (result structs.StationSetResult, err error) {
+	requestUri := "/version/" + version + "/parameter/" + parameter + "/station-set/" + stationSet
+	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
+	return result, err
+}
+
+func GetPeriodStationResult(version string, parameter string, station string, period string) (result structs.PeriodResult, err error) {
+	requestUri := "/version/" + version + "/parameter/" + parameter + "/station/" + station + "/period/" + period
+	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
+	return result, err
+}
+
+func GetPeriodStationSetResult(version string, parameter string, stationSet string, period string) (result structs.PeriodResult, err error) {
+	requestUri := "/version/" + version + "/parameter/" + parameter + "/station-set/" + stationSet + "/period/" + period
+	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
+	return result, err
+}
