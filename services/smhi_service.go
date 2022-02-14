@@ -1,8 +1,8 @@
 package services
 
 import (
-	"app/structs"
-	"app/utilities"
+	"github.com/hsnkorkmaz/smhi-go/structs"
+	"github.com/hsnkorkmaz/smhi-go/utilities"
 )
 
 func GetCategoryResult() (result structs.CategoryResult, err error) {

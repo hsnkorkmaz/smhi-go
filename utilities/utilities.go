@@ -1,7 +1,7 @@
 package utilities
 
 import (
-	"app/config"
+	"github.com/hsnkorkmaz/smhi-go/config"
 	"fmt"
 )
 

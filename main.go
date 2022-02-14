@@ -1,7 +1,7 @@
 package main
 
 import (
-	"app/services"
+	"github.com/hsnkorkmaz/smhi-go/services"
 	"fmt"
 )
 
