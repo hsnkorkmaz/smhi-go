@@ -9,7 +9,7 @@ func GetCategoryResult() (result structs.CategoryResult, err error) {
 	requestUri := ""
 	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
 	return result, err
-}	
+}
 
 func GetVersionResult(version string) (result structs.VersionResult, err error) {
 	requestUri := "/version/" + version
@@ -43,6 +43,18 @@ func GetPeriodStationResult(version string, parameter string, station string, pe
 
 func GetPeriodStationSetResult(version string, parameter string, stationSet string, period string) (result structs.PeriodResult, err error) {
 	requestUri := "/version/" + version + "/parameter/" + parameter + "/station-set/" + stationSet + "/period/" + period
+	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
+	return result, err
+}
+
+func GetDataStationResult(version string, parameter string, station string, period string) (result structs.DataStationResult, err error) {
+	requestUri := "/version/" + version + "/parameter/" + parameter + "/station/" + station + "/period/" + period + "/data"
+	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
+	return result, err
+}
+
+func GetDataStationSetResult(version string, parameter string, stationSet string, period string) (result structs.DataStationSetResult, err error) {
+	requestUri := "/version/" + version + "/parameter/" + parameter + "/station-set/" + stationSet + "/period/" + period + "/data"
 	err = HttpRequest(utilities.GetEndpoint(requestUri), &result)
 	return result, err
 }

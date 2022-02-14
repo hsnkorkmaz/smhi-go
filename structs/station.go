@@ -16,4 +16,5 @@ type Station struct {
 	Title         string  `json:"title"`
 	Summary       string  `json:"summary"`
 	Links         []Link  `json:"link"`
+	Values         []Value `json:"value"`
 }
