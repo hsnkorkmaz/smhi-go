@@ -1,13 +1,14 @@
 package main
 
 import (
-	"github.com/hsnkorkmaz/smhi-go/services"
 	"fmt"
+
+	"github.com/hsnkorkmaz/smhi-go/services"
 )
 
-func main() {
+func testFunc() {
 	response, err := services.GetVersionResult("1.0")
-	
+
 	if err != nil {
 		fmt.Println(err)
 	}
